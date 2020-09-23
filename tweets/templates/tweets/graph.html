@@ -1,42 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-        <meta http-equiv="content-type" content="text/html; charset=UTF8">
-        <title>Covid Tweets</title>
-        
-        <!-- LOAD DJANGO TAGS -->
-        {% load static %}
+{% extends 'tweets/base.html' %}
+{% block content %}
+    {% load static %}
+    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-        <style>
-            body {
-                background-color: rgb(237, 242, 248)!important;
-            }
+    <style>
+        body {
+            background-color: rgb(237, 242, 248)!important;
+        }
 
-            .modebar-container {
-                display: none!important;
-            }
-        </style>
+        .modebar-container {
+            display: none!important;
+        }
+    </style>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div style="margin-top: 1em;">
 
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </div>
+    <div class="col-12 text-center">
+        <h1 id="title">Covid Tweet Polysingularity</h1>
+        <!-- <svg width="960" height="600"></svg> -->
+        <div id="graph"></div>
+    </div>
 
-	</head>
-	<body>
-		<div id="container">
-            <div style="margin-top: 1em;">
-
-            </div>
-            <div class="col-12 text-center">
-                <h1 id="title">Covid Tweet Polysingularity</h1>
-                <!-- <svg width="960" height="600"></svg> -->
-                <div id="graph"></div>
-            </div>
-        </div>
-        
-        <script src="{% static 'tweets/js/miserables.js' %}"></script>
-        <script src="{% static 'tweets/js/index.js' %}"></script>
-        
-	</body>
-</html>
+    <script src="{% static 'tweets/js/miserables.js' %}"></script>
+    <script src="{% static 'tweets/js/index.js' %}"></script>
+{% endblock %}

@@ -18,9 +18,22 @@ body {
     margin-bottom: 20px;
     text-align: center;
     float:left;
+    position: relative;
+    z-index: 0;
 }
 .sidebaritem {
     padding: 2em 0;
+    transition: all .2s;
+    cursor: pointer;
+}
+.sidebaritem:hover {
+    transform: scale(1.1);
+}
+.sidebarbottomitem {
+    position: absolute;
+    bottom: 5vh;
+    left: 0;
+    right: 0;
 }
 
 .navbartop {
@@ -28,11 +41,15 @@ body {
     background-color: #fff;
     box-shadow: 1px 1px 4px #3636368a;
     padding: 0;
+    z-index: 1;
 }
 .navoptions {
     color: black;
     font-weight: 650;
     cursor: pointer;
+    border-bottom: 3px solid rgb(64, 117, 233);
+    padding-bottom: 1em;
+    border-radius: 2px;
     font-size: 1.1em;
     transition: all .2s;
 }
@@ -40,11 +57,26 @@ body {
     font-size: 1.12em;
 }
 .navoptionsNotActive {
+    border: 0!important;
     color: grey!important;
 }
 
 .full {
-    height: 100%
+    height: 100%;
+}
+
+.maintitle {
+    padding: 1em 0 0 1em;
+    font-size: 3em;
+    font-weight: 750;
+}
+
+.infobox {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px #3636368a;
+    height: 80vh;
+    margin: 3em 1em 1em 3em;
 }
 
 .nopad {
