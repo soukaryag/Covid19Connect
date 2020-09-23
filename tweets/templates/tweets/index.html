@@ -3,47 +3,87 @@
 	<head>
 		<meta charset="utf-8">
         <meta http-equiv="content-type" content="text/html; charset=UTF8">
-        <title>Covid Tweets</title>
+        <title>Covid-19 Connect</title>
         
         <!-- LOAD DJANGO TAGS -->
         {% load static %}
 
-        <style>
-            body {
-                background-color: #2d2e36!important;
-                color: #fff!important;
-            }
-
-            .modebar-container {
-                display: none!important;
-            }
-        </style>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-	</head>
-	<body>
-		<div id="container">
-            <div style="margin-top: 1em;">
-
-            </div>
-            <div class="col-12 text-center">
-                <h1 id="title">Covid Tweet Polysingularity</h1>
-                <!-- <svg width="960" height="600"></svg> -->
-                <div id="graph"></div>
-            </div>
-        </div>
-        
-        <script src="{% static 'tweets/js/miserables.js' %}"></script>
-        <script src="{% static 'tweets/js/index.js' %}"></script>
-        
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Iceland" async />
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito" async />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" async>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" async>
-            </script>
-	</body>
+        </script>
+        <link rel="stylesheet" type="text/css" href="{% static 'tweets/css/index.css' %}">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+    
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
+    
+            });
+
+        </script>
+
+	</head>
+	<body>
+		<div class="wrapper">
+            <!-- Navbar -->
+            <nav class="navbar navbartop">
+                <div class="container-fluid full nopad">
+                    <div class="col-md-1">
+                        <img src="{% static 'tweets/img/uva.png' %}" width="50"/>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <a class="navoptions">
+                                    Graph View
+                                </a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a class="navoptions navoptionsNotActive" onclick="">
+                                    Table View
+                                </a>
+                            </div>
+                        </div>                                                
+                    </div>
+                    <div class="col-md-3 full nopad">
+                        <div class="controls full nopad">
+                            Exit
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Sidebar  -->
+            <div class="sidebar">
+                <div class="tex-center sidebaritem">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/3515/3515399.svg" width="45"/>
+                </div>
+                <div class="tex-center sidebaritem">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/3515/3515301.svg" width="45"/>
+                </div>
+                <div class="tex-center sidebaritem">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/345/345656.svg" width="45"/>
+                </div>
+                <div class="tex-center sidebaritem">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/431/431177.svg" width="45"/>
+                </div>
+                <div class="tex-center sidebaritem">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/430/430052.svg" width="45"/>
+                </div>
+                
+            </div>
+        
+            <!-- Page Content  -->
+            <div id="content">
+            </div>
+        </div>
+    </body>
+
+
 </html>

@@ -1,0 +1,59 @@
+body {
+    overflow: hidden;
+    font-family: Nunito;
+    background-color: rgb(237, 242, 248);
+}
+
+.wrapper{
+    height:100vh;
+}
+
+.sidebar{
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px #3636368a;
+    width: 80px;
+    height: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    float:left;
+}
+.sidebaritem {
+    padding: 2em 0;
+}
+
+.navbartop {
+    height: 5%;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #3636368a;
+    padding: 0;
+}
+.navoptions {
+    color: black;
+    font-weight: 650;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all .2s;
+}
+.navoptions:hover {
+    font-size: 1.12em;
+}
+.navoptionsNotActive {
+    color: grey!important;
+}
+
+.full {
+    height: 100%
+}
+
+.nopad {
+    padding: 0;
+}
+
+.controls {
+    background-color: #fcfbfd;
+    border-left: 1px solid #e0e0e0;
+    padding: 0.5em 1em;
+}
+
