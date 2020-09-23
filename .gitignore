@@ -1,6 +1,7 @@
 /.vscode
 db.sqlite3
 .DS_Store
+.env
 .idea/
 venv/
 env/
