@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF8">
+        <title>Covid Tweets</title>
+        
+        <!-- LOAD DJANGO TAGS -->
+        {% load static %}
+
+        <style>
+            body {
+                background-color: #2d2e36!important;
+                color: #fff!important;
+            }
+
+            .modebar-container {
+                display: none!important;
+            }
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+	</head>
+	<body>
+		<div id="container">
+            <div style="margin-top: 1em;">
+
+            </div>
+            <div class="col-12 text-center">
+                <h1 id="title">Covid Tweet Polysingularity</h1>
+                <!-- <svg width="960" height="600"></svg> -->
+                <div id="graph"></div>
+            </div>
+        </div>
+        
+        <script src="{% static 'tweets/js/miserables.js' %}"></script>
+        <script src="{% static 'tweets/js/index.js' %}"></script>
+        
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Iceland" async />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" async>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" async>
+            </script>
+	</body>
+</html>
